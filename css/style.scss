@@ -92,916 +92,926 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   min-width: 50px;
-}
 
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-/* header */
-
-.header {
-
-  display: flex;
-  margin-top: 29px;
-  margin-bottom: 28px;
-
-  @include mpc {
-    margin-left: 10px;
-    margin-right: 10px;
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
   }
 
-  &-logo {
+  /* header */
 
-    img {
-      width: 263px;
-      height: 73px;
+  .header {
 
-      @include bspsides {
-        width: 200px;
-        height: auto;
-      }
+    display: flex;
+    margin-top: 29px;
+    margin-bottom: 28px;
 
-      @include bspsides {
-        width: 150px;
-      }
+    @include mpc {
+      margin-left: 10px;
+      margin-right: 10px;
     }
-  }
 
-  &-contact {
+    &-logo {
 
-    margin-left: auto;
+      img {
+        width: 263px;
+        height: 73px;
 
-    .header-time {
-
-      font-size: 14px;
-      margin-bottom: 15px;
-      line-height: 1.2;
-
-      :first-child {
-        margin-right: 10px;
-
-      }
-
-      p {
-        display: inline;
-
-        @include bspside {
-          display: block;
+        @include bspsides {
+          width: 200px;
+          height: auto;
         }
 
         @include bspsides {
-          text-align: right;
+          width: 150px;
         }
       }
-
-      &-text1 {
-
-        @include bspside {
-          margin-bottom: 8px;
-        }
-      }
-
     }
 
-    .header-tel {
+    &-contact {
 
       margin-left: auto;
-      text-align: right;
 
-      ::before {
-        content: '';
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        background-image: url(../img/tel.png);
-        background-size: contain;
-        vertical-align: middle;
-        margin-right: 10px;
-        vertical-align: bottom;
+      .header-time {
 
-        @include bspsides {
-          width: 20px;
-          height: 20px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+
+        :first-child {
+          margin-right: 10px;
+
+        }
+
+        p {
+          display: inline;
+
+          @include bspside {
+            display: block;
+          }
+
+          @include bspsides {
+            text-align: right;
+          }
+        }
+
+        &-text1 {
+
+          @include bspside {
+            margin-bottom: 8px;
+          }
         }
 
       }
 
-      .header-number {
+      .header-tel {
 
-        font-size: 24px;
-        font-weight: bold;
-        line-height: 1;
-        text-decoration: none;
-        color: #21A937;
+        margin-left: auto;
+        text-align: right;
 
-        @media(min-width: 768px) {
-          a[href^="tel:"] {
-            pointer-events: none;
+        ::before {
+          content: '';
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          background-image: url(../img/tel.png);
+          background-size: contain;
+          vertical-align: middle;
+          margin-right: 10px;
+          vertical-align: bottom;
+
+          @include bspsides {
+            width: 20px;
+            height: 20px;
+          }
+
+        }
+
+        .header-number {
+
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 1;
+          text-decoration: none;
+          color: #21A937;
+
+          @media(min-width: 768px) {
+            a[href^="tel:"] {
+              pointer-events: none;
+            }
           }
 
           @include bspsides {
             font-size: 20px;
           }
+
+          @media screen and (max-width: 363px) {
+            white-space: nowrap;
+          }
         }
       }
     }
   }
-}
 
-/* mainvisual */
+  /* mainvisual */
 
-.mainvisual {
+  .mainvisual {
 
 
-  .wrapper {
-    background-image: url(../img/mainvisual.png);
-    height: 0;
-    background-position: center center;
-    background-size: cover;
-    padding-top: 66.6666666667%;
-    width: 100%;
-    position: relative;
+    .wrapper {
+      background-image: url(../img/mainvisual.png);
+      height: 0;
+      background-position: center center;
+      background-size: cover;
+      padding-top: 66.6666666667%;
+      width: 100%;
+      position: relative;
 
-    .mainvisual-text {
+      .mainvisual-text {
 
-      .text1 {
-        writing-mode: vertical-rl;
-        padding: 16px 23px 76px;
-        background-color: white;
-        position: absolute;
-        top: 8%;
-        left: 19%;
-        font-size: 28px;
-        font-weight: bold;
-        line-height: 1.2;
+        .text1 {
+          writing-mode: vertical-rl;
+          padding: 16px 23px 76px;
+          background-color: white;
+          position: absolute;
+          top: 8%;
+          left: 19%;
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 1.2;
 
-        @include ipad {
-          padding: 16px 23px 55px;
-          top: 10%;
-          left: 25%;
-          font-size: 25px;
-          line-height: 1;
+          @include ipad {
+            padding: 16px 23px 55px;
+            top: 10%;
+            left: 25%;
+            font-size: 25px;
+            line-height: 1;
+          }
+
+          @include bspside {
+            padding: 16px 23px 49px;
+            top: 10%;
+            left: 25%;
+            font-size: 20px;
+            line-height: 1;
+          }
+
+          @include bspsides {
+            padding: 10px 17px 45px;
+            top: 10%;
+            left: 25%;
+            font-size: 16px;
+            line-height: 1;
+          }
+
+          @media screen and (max-width: 439px) {
+            padding: 10px 17px 26px;
+            top: 12%;
+            left: 28%;
+            font-size: 12px;
+            line-height: 1;
+          }
+
+          @include se {
+            padding: 10px 13px 24px;
+            top: 12%;
+            left: 28%;
+            font-size: 10px;
+            line-height: 1;
+          }
+
         }
 
-        @include bspside {
+        .text2 {
+          writing-mode: vertical-rl;
           padding: 16px 23px 49px;
-          top: 10%;
-          left: 25%;
-          font-size: 20px;
-          line-height: 1;
-        }
-
-        @include bspsides {
-          padding: 10px 17px 45px;
-          top: 10%;
-          left: 25%;
-          font-size: 16px;
-          line-height: 1;
-        }
-
-        @media screen and (max-width: 439px) {
-          padding: 10px 17px 26px;
-          top: 12%;
-          left: 28%;
-          font-size: 12px;
-          line-height: 1;
-        }
-
-        @include se {
-          padding: 10px 13px 24px;
-          top: 12%;
-          left: 28%;
-          font-size: 10px;
-          line-height: 1;
-        }
-
-      }
-
-      .text2 {
-        writing-mode: vertical-rl;
-        padding: 16px 23px 49px;
-        background-color: white;
-        position: absolute;
-        top: 8%;
-        left: 8%;
-        font-size: 28px;
-        font-weight: bold;
-        line-height: 1.2;
-
-        @include ipad {
-          padding: 16px 23px 30px;
-          top: 10%;
+          background-color: white;
+          position: absolute;
+          top: 8%;
           left: 8%;
-          font-size: 25px;
-          line-height: 1;
-        }
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 1.2;
 
-        @include bspside {
-          padding: 16px 23px 30px;
-          top: 10%;
-          left: 10%;
-          font-size: 20px;
-          line-height: 1;
-        }
+          @include ipad {
+            padding: 16px 23px 30px;
+            top: 10%;
+            left: 8%;
+            font-size: 25px;
+            line-height: 1;
+          }
 
-        @include bspsides {
-          padding: 10px 17px 30px;
-          top: 10%;
-          left: 10%;
-          font-size: 16px;
-          line-height: 1;
-        }
+          @include bspside {
+            padding: 16px 23px 30px;
+            top: 10%;
+            left: 10%;
+            font-size: 20px;
+            line-height: 1;
+          }
 
-        @media screen and (max-width: 439px) {
-          padding: 10px 17px 15px;
-          top: 12%;
-          left: 10%;
-          font-size: 12px;
-          line-height: 1;
-        }
+          @include bspsides {
+            padding: 10px 17px 30px;
+            top: 10%;
+            left: 10%;
+            font-size: 16px;
+            line-height: 1;
+          }
 
-        @include se {
-          padding: 10px 13px 15px;
-          top: 12%;
-          left: 10%;
-          font-size: 10px;
-          line-height: 1;
-        }
+          @media screen and (max-width: 439px) {
+            padding: 10px 17px 15px;
+            top: 12%;
+            left: 10%;
+            font-size: 12px;
+            line-height: 1;
+          }
+
+          @include se {
+            padding: 10px 13px 15px;
+            top: 12%;
+            left: 10%;
+            font-size: 10px;
+            line-height: 1;
+          }
 
 
-        span {
-          color: #21A937;
+          span {
+            color: #21A937;
+          }
         }
       }
     }
   }
-}
 
-/* about */
+  /* about */
 
-.about {
-
-  @include mpc {
-    margin: 0 10px;
-  }
-
-  .container {
-    display: flex;
-    height: 664px;
-    align-items: center;
+  .about {
 
     @include mpc {
-      height: 550px;
-      margin-top: 20px;
+      margin: 0 10px;
     }
 
-    @include ipad {
-      display: block;
-      height: 600px;
-    }
-
-    @include bspsides {
-      height: 530px;
-    }
-
-    @include bsp {
-      height: 500px;
-    }
-
-    @media screen and (max-width: 434px) {
-      height: 450px;
-    }
-
-    @media screen and (max-width: 383px) {
-      height: 400px;
-    }
-
-    .about-text {
-
-      .text1 {
-
-        display: inline-block;
-        font-size: 24px;
-        font-weight: bold;
-        line-height: 1.2;
-        background: linear-gradient(transparent 70%, #99E5A5 30%);
-        margin-bottom: 40px;
-
-        @include ipad {
-          margin-top: 30px;
-          margin-bottom: 20px;
-        }
-
-        @media screen and (max-width: 434px) {
-          font-size: 20px;
-        }
-
-        @media screen and (max-width: 383px) {
-          font-size: 18px;
-        }
-
-      }
-
-      .text2 {
-
-        display: inline-block;
-        font-size: 24px;
-        font-weight: bold;
-        line-height: 1.2;
-        background: linear-gradient(transparent 70%, #99E5A5 30%);
-
-        @media screen and (max-width: 434px) {
-          font-size: 20px;
-        }
-
-        @media screen and (max-width: 383px) {
-          font-size: 18px;
-        }
-
-      }
-
-      p {
-        margin-top: 37px;
-        font-size: 16px;
-        line-height: 2.4;
-
-        @include ipad {
-          margin-bottom: 20px;
-        }
-
-        @media screen and (max-width: 434px) {
-          font-size: 14px;
-          margin-top: 30px;
-        }
-
-        @media screen and (max-width: 383px) {
-          font-size: 12px;
-          margin-top: 30px;
-        }
-      }
-    }
-
-    img {
-      margin-left: auto;
-      height: auto;
-      width: 50%;
-      display: block;
-
-    }
-
-  }
-
-}
-
-/* detail */
-
-.detail {
-
-  text-align: center;
-  background-color: #F5FCF8;
-  padding-bottom: 89px;
-
-  @include ipad {
-    padding-bottom: 60px;
-  }
-
-  @include bsp {
-    padding-bottom: 40px;
-  }
-
-  &-title {
-
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.6;
-    background: linear-gradient(transparent 70%, #99E5A5 30%);
-    display: inline-block;
-    margin: 87px 0 73px;
-
-    @include mpc {
-      margin: 70px 0 60px;
-    }
-
-    @include ipad {
-      margin: 60px 0 30px;
-    }
-
-    @include bsp {
-      font-size: 20px;
-      margin: 30px 0 20px;
-    }
-
-    @media screen and (max-width: 389px) {
-      font-size: 18px;
-    }
-
-  }
-
-  &-copy {
-
-    font-size: 16px;
-    line-height: 2.4;
-    margin-bottom: 36px;
-
-    @include bsp {
-      font-size: 14px;
-      margin-bottom: 30px;
-    }
-
-    @media screen and (max-width: 389px) {
-      font-size: 12px;
-    }
-
-  }
-
-  &-list {
-
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-
-    :last-child {
-      margin-right: 0;
+    .container {
+      display: flex;
+      height: 664px;
+      align-items: center;
 
       @include mpc {
-        margin: 0 auto;
+        height: 550px;
+        margin-top: 20px;
       }
-    }
 
-    :nth-child(2) {
+      @include ipad {
+        display: block;
+        height: 600px;
+      }
 
-      @include mpc {
-        height: 450px;
+      @include bspsides {
+        height: 530px;
       }
 
       @include bsp {
+        height: 500px;
+      }
+
+      @media screen and (max-width: 434px) {
+        height: 450px;
+      }
+
+      @media screen and (max-width: 383px) {
         height: 400px;
       }
+
+      .about-text {
+
+        .text1 {
+
+          display: inline-block;
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 1.2;
+          background: linear-gradient(transparent 70%, #99E5A5 30%);
+          margin-bottom: 40px;
+
+          @include ipad {
+            margin-top: 30px;
+            margin-bottom: 20px;
+          }
+
+          @media screen and (max-width: 434px) {
+            font-size: 20px;
+          }
+
+          @media screen and (max-width: 383px) {
+            font-size: 18px;
+          }
+
+        }
+
+        .text2 {
+
+          display: inline-block;
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 1.2;
+          background: linear-gradient(transparent 70%, #99E5A5 30%);
+
+          @media screen and (max-width: 434px) {
+            font-size: 20px;
+          }
+
+          @media screen and (max-width: 383px) {
+            font-size: 18px;
+          }
+
+        }
+
+        p {
+          margin-top: 37px;
+          font-size: 16px;
+          line-height: 2.4;
+
+          @include ipad {
+            margin-bottom: 20px;
+          }
+
+          @media screen and (max-width: 434px) {
+            font-size: 14px;
+            margin-top: 30px;
+          }
+
+          @media screen and (max-width: 383px) {
+            font-size: 12px;
+            margin-top: 30px;
+          }
+        }
+      }
+
+      img {
+        margin-left: auto;
+        height: auto;
+        width: 50%;
+        display: block;
+
+      }
+
     }
 
+  }
 
-    @include mpc {
-      display: block;
+  /* detail */
+
+  .detail {
+
+    text-align: center;
+    background-color: #F5FCF8;
+    padding-bottom: 89px;
+
+    @include ipad {
+      padding-bottom: 60px;
     }
 
-    li {
-      list-style: none;
-      width: 380px;
-      height: 591px;
-      background-color: white;
-      position: relative;
-      border-radius: 10px;
-      border: 2px #C9C9C9 solid;
+    @include bsp {
+      padding-bottom: 40px;
+    }
+
+    &-title {
+
       text-align: center;
-      margin-right: 20px;
-
-      @include mpc {
-        margin: 0 auto 20px;
-        width: 80%;
-        height: 520px;
-      }
-
-      @include bsp {
-        height: 450px;
-      }
-
-
-    }
-
-    h3 {
       font-size: 24px;
       font-weight: bold;
       line-height: 1.6;
-      margin: 47px 0 48px;
+      background: linear-gradient(transparent 70%, #99E5A5 30%);
+      display: inline-block;
+      margin: 87px 0 73px;
 
       @include mpc {
-        margin: 30px 0 30px;
+        margin: 70px 0 60px;
+      }
+
+      @include ipad {
+        margin: 60px 0 30px;
       }
 
       @include bsp {
         font-size: 20px;
+        margin: 30px 0 20px;
       }
+
+      @media screen and (max-width: 389px) {
+        font-size: 18px;
+      }
+
     }
 
-    p {
-      font-size: 16px;
-      font-weight: bold;
-      line-height: 2.3;
-      text-align: left;
-      width: 90%;
-      margin: 0 auto;
+    &-copy {
 
-      @include mpc {
-        text-align: center;
-      }
+      font-size: 16px;
+      line-height: 2.4;
+      margin-bottom: 36px;
 
       @include bsp {
         font-size: 14px;
+        margin-bottom: 30px;
       }
 
-      @media screen and (max-width: 388px) {
+      @media screen and (max-width: 389px) {
         font-size: 12px;
       }
 
-      @include se {
-        font-size: 11px;
+    }
+
+    &-list {
+
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+
+      :last-child {
+        margin-right: 0;
+
+        @include mpc {
+          margin: 0 auto;
+        }
       }
 
+      :nth-child(2) {
+
+        @include mpc {
+          height: 450px;
+        }
+
+        @include bsp {
+          height: 400px;
+        }
+      }
+
+
+      @include mpc {
+        display: block;
+      }
+
+      li {
+        list-style: none;
+        width: 380px;
+        height: 591px;
+        background-color: white;
+        position: relative;
+        border-radius: 10px;
+        border: 2px #C9C9C9 solid;
+        text-align: center;
+        margin-right: 20px;
+
+        @include mpc {
+          margin: 0 auto 20px;
+          width: 80%;
+          height: 520px;
+        }
+
+        @include bsp {
+          height: 450px;
+        }
+
+
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.6;
+        margin: 47px 0 48px;
+
+        @include mpc {
+          margin: 30px 0 30px;
+        }
+
+        @include bsp {
+          font-size: 20px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 2.3;
+        text-align: left;
+        width: 90%;
+        margin: 0 auto;
+
+        @include mpc {
+          text-align: center;
+        }
+
+        @include bsp {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 388px) {
+          font-size: 12px;
+        }
+
+        @include se {
+          font-size: 11px;
+        }
+
+      }
+
+      img {
+
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+
+      }
     }
-
-    img {
-
-      position: absolute;
-      bottom: 0px;
-      left: 50%;
-      transform: translateX(-50%);
-
-    }
-  }
-}
-
-/* news */
-
-.news {
-
-  background-color: #F5FCF8;
-  text-align: center;
-  padding-bottom: 112px;
-
-  @include ipad {
-    padding-bottom: 80px;
   }
 
-  @include bsp {
-    padding-bottom: 40px;
+  _::-webkit-full-page-media,
+  _:future,
+  :root .moredetail-copy {
+    font-size: 15px;
   }
 
-  h3 {
+  /* news */
 
+  .news {
+
+    background-color: #F5FCF8;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.6;
-    background: linear-gradient(transparent 70%, #99E5A5 30%);
-    display: inline-block;
-    margin: 0 auto 70px;
+    padding-bottom: 112px;
 
     @include ipad {
-      margin: 0 auto 60px;
+      padding-bottom: 80px;
     }
 
     @include bsp {
-      font-size: 20px;
-      margin: 0 auto 40px;
+      padding-bottom: 40px;
     }
 
-    @media screen and (max-width: 389px) {
-      font-size: 18px;
-    }
-  }
+    h3 {
 
-  .news-box {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.6;
+      background: linear-gradient(transparent 70%, #99E5A5 30%);
+      display: inline-block;
+      margin: 0 auto 70px;
 
-    background-color: white;
-    text-align: left;
-    border-radius: 30px;
-    padding: 54px 0 109px;
-    box-shadow: 0 3px 6px rgba($color:#000000, $alpha: 0.16);
+      @include ipad {
+        margin: 0 auto 60px;
+      }
 
-    @include mpc {
-      width: 80%;
-      margin: 0 auto;
-      padding: 40px 0 60px;
-    }
+      @include bsp {
+        font-size: 20px;
+        margin: 0 auto 40px;
+      }
 
-    @include sspc {
-      padding: 20px 0 30px;
-    }
-
-    @include lbsp {
-      padding: 10px 0 20px;
+      @media screen and (max-width: 389px) {
+        font-size: 18px;
+      }
     }
 
-    .news-item {
+    .news-box {
 
-      padding: 20px 0 18px;
-      border-bottom: #E7E7E7 2px solid;
-      margin: 0 68px 0 64px;
-      list-style: none;
+      background-color: white;
+      text-align: left;
+      border-radius: 30px;
+      padding: 54px 0 109px;
+      box-shadow: 0 3px 6px rgba($color:#000000, $alpha: 0.16);
+
+      @include mpc {
+        width: 80%;
+        margin: 0 auto;
+        padding: 40px 0 60px;
+      }
+
+      @include sspc {
+        padding: 20px 0 30px;
+      }
 
       @include lbsp {
-        margin: 0 40px 0 40px;
-        padding: 10px 0 10px;
+        padding: 10px 0 20px;
       }
 
-      a {
+      .news-item {
 
-        text-decoration: none;
+        padding: 20px 0 18px;
+        border-bottom: #E7E7E7 2px solid;
+        margin: 0 68px 0 64px;
+        list-style: none;
 
-        .news-date {
-
-          color: #21A937;
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 2.4;
+        @include lbsp {
+          margin: 0 40px 0 40px;
+          padding: 10px 0 10px;
         }
 
-        .news-category {
+        a {
 
-          color: #FFFFFF;
-          background-color: #444444;
-          font-size: 12px;
-          font-weight: bold;
-          line-height: 3.2;
-          padding: 7px 15px;
-          margin: 0 34px 0 31px;
+          text-decoration: none;
 
-          @include lbsp {
-            display: block;
-            padding: 10px 15px;
-            width: 50px;
-            margin: 0;
-            line-height: 1;
-            text-align: center;
+          .news-date {
+
+            color: #21A937;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.4;
           }
 
-          @media screen and (max-width: 441px) {
-            padding: 10px 10px;
-            width: 50px;
+          .news-category {
+
+            color: #FFFFFF;
+            background-color: #444444;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 3.2;
+            padding: 7px 15px;
+            margin: 0 34px 0 31px;
+
+            @include lbsp {
+              display: block;
+              padding: 10px 15px;
+              width: 50px;
+              margin: 0;
+              line-height: 1;
+              text-align: center;
+            }
+
+            @media screen and (max-width: 441px) {
+              padding: 10px 10px;
+              width: 50px;
+            }
+
           }
 
-        }
+          .news-text {
 
-        .news-text {
+            color: #444444;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.4;
 
-          color: #444444;
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 2.4;
+            @include sspc {
+              display: block;
+            }
 
-          @include sspc {
-            display: block;
-          }
+            @include lbsp {
+              line-height: 2;
+            }
 
-          @include lbsp {
-            line-height: 2;
-          }
-
-          @media screen and (max-width: 441px) {
-            font-size: 14px;
+            @media screen and (max-width: 441px) {
+              font-size: 14px;
+            }
           }
         }
       }
     }
   }
-}
 
-/* footer */
+  /* footer */
 
-footer {
+  footer {
 
-  width: 100%;
-  padding-top: 172px;
-  text-align: center;
-  padding-bottom: 173px;
-
-  @include mpc {
-    padding-top: 100px;
-    padding-bottom: 70px;
-  }
-
-  @include spc {
-    padding-top: 80px;
-  }
-
-  @include bsp {
-    padding-top: 40px;
-  }
-
-  .container {
-
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    padding-top: 172px;
+    text-align: center;
+    padding-bottom: 173px;
 
     @include mpc {
-      margin: 0 20px;
+      padding-top: 100px;
+      padding-bottom: 70px;
     }
 
     @include spc {
-      display: block;
-      margin: 0;
+      padding-top: 80px;
     }
 
-    .map-wrapper {
+    @include bsp {
+      padding-top: 40px;
+    }
 
-      position: relative;
-      width: 51%;
+    .container {
 
-      @include spc {
-        width: 80%;
-        margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+      @include mpc {
+        margin: 0 20px;
       }
 
-      .map {
+      @include spc {
+        display: block;
+        margin: 0;
+      }
 
-        height: 0;
-        padding-top: 56.25%;
+      .map-wrapper {
 
-        iframe {
+        position: relative;
+        width: 51%;
 
-          position: absolute;
-          top: 0;
-          left: 0;
+        @include spc {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        .map {
+
+          height: 0;
+          padding-top: 56.25%;
+
+          iframe {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .info-wrapper {
+
+        width: 45%;
+        text-align: left;
+        margin-top: 24px;
+        margin-left: 20px;
+
+        @include spc {
+          width: 80%;
+          margin: 30px auto 0;
+        }
+
+        .info {
+
           width: 100%;
-          height: 100%;
-        }
-      }
-    }
 
-    .info-wrapper {
+          &-logo {
 
-      width: 45%;
-      text-align: left;
-      margin-top: 24px;
-      margin-left: 20px;
+            width: 263px;
+            height: 73px;
+            margin-bottom: 25px;
 
-      @include spc {
-        width: 80%;
-        margin: 30px auto 0;
-      }
+            @include bspsides {
+              margin-bottom: 10px;
+              width: 40%;
+              height: auto;
+            }
 
-      .info {
-
-        width: 100%;
-
-        &-logo {
-
-          width: 263px;
-          height: 73px;
-          margin-bottom: 25px;
-
-          @include bspsides {
-            margin-bottom: 10px;
-            width: 40%;
-            height: auto;
-          }
-
-          @include bspsides {
-            width: 50%;
-          }
-
-
-        }
-
-        &-address {
-
-          font-size: 16px;
-          line-height: 2.4;
-
-          @media screen and (max-width: 356px) {
-            line-height: 2;
-          }
-
-
-          &-number {
-            margin-right: 10px;
+            @include bspsides {
+              width: 50%;
+            }
 
 
           }
 
-          &-place {
+          &-address {
+
+            font-size: 16px;
+            line-height: 2.4;
 
             @media screen and (max-width: 356px) {
-              display: block;
+              line-height: 2;
             }
-          }
-        }
 
-        &-tel {
 
-          margin: 25px 0 28px;
+            &-number {
+              margin-right: 10px;
 
-          @include bspsides {
-            margin: 15px 0 20px;
-          }
-
-          ::before {
-
-            content: '';
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background-image: url(../img/tel.png);
-            background-size: contain;
-            vertical-align: middle;
-            margin-right: 10px;
-            vertical-align: bottom;
-          }
-
-          a {
-
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 1;
-            text-decoration: none;
-            color: #21A937;
-
-          }
-        }
-
-        .info-reception-wrapper {
-
-          .info-reception {
-
-            display: flex;
-            border-top: #E7E7E7 2px solid;
-            margin-bottom: 20px;
-            padding-top: 19px;
-            font-size: 14px;
-            line-height: 2.7;
-
-            &-title {
-
-              border-right: #E7E7E7 2px solid;
-              padding-right: 28px;
 
             }
 
-            &-time {
+            &-place {
 
-              list-style: none;
-              padding-left: 29px;
+              @media screen and (max-width: 356px) {
+                display: block;
+              }
+            }
+          }
 
-              li {
-                margin-bottom: 5px;
+          &-tel {
+
+            margin: 25px 0 28px;
+
+            @include bspsides {
+              margin: 15px 0 20px;
+            }
+
+            ::before {
+
+              content: '';
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background-image: url(../img/tel.png);
+              background-size: contain;
+              vertical-align: middle;
+              margin-right: 10px;
+              vertical-align: bottom;
+            }
+
+            a {
+
+              font-size: 24px;
+              font-weight: bold;
+              line-height: 1;
+              text-decoration: none;
+              color: #21A937;
+
+            }
+          }
+
+          .info-reception-wrapper {
+
+            .info-reception {
+
+              display: flex;
+              border-top: #E7E7E7 2px solid;
+              margin-bottom: 20px;
+              padding-top: 19px;
+              font-size: 14px;
+              line-height: 2.7;
+
+              &-title {
+
+                border-right: #E7E7E7 2px solid;
+                padding-right: 28px;
+
+              }
+
+              &-time {
+
+                list-style: none;
+                padding-left: 29px;
+
+                li {
+                  margin-bottom: 5px;
+                }
+
+                &-day {
+
+                  background: linear-gradient(transparent 80%, #99E5A5 20%);
+
+                }
+
+                &-am {
+
+                  margin: 0 23px 0 16px;
+
+                  @include bbsp {
+                    display: block;
+                    margin: 0;
+                  }
+                }
+
+                &-pm {
+
+                  @include bbsp {
+                    display: block;
+                  }
+                }
+
+              }
+            }
+
+            .info-close {
+
+              display: flex;
+              border-bottom: #E7E7E7 2px solid;
+              padding-bottom: 19px;
+
+
+              &-title {
+
+                font-size: 14px;
+                line-height: 1.5;
+                border-right: #E7E7E7 2px solid;
+                padding-right: 42px;
+
               }
 
               &-day {
 
-                background: linear-gradient(transparent 80%, #99E5A5 20%);
-
+                font-size: 14px;
+                line-height: 1.5;
+                padding-left: 28px;
               }
-
-              &-am {
-
-                margin: 0 23px 0 16px;
-
-                @include bbsp {
-                  display: block;
-                  margin: 0;
-                }
-              }
-
-              &-pm {
-
-                @include bbsp {
-                  display: block;
-                }
-              }
-
             }
           }
 
-          .info-close {
+          small {
+            margin-top: 20px;
+            font-size: 11px;
+            line-height: 3.5;
+            float: right;
 
-            display: flex;
-            border-bottom: #E7E7E7 2px solid;
-            padding-bottom: 19px;
-
-
-            &-title {
-
-              font-size: 14px;
-              line-height: 1.5;
-              border-right: #E7E7E7 2px solid;
-              padding-right: 42px;
-
-            }
-
-            &-day {
-
-              font-size: 14px;
-              line-height: 1.5;
-              padding-left: 28px;
-            }
           }
-        }
-
-        small {
-          margin-top: 20px;
-          font-size: 11px;
-          line-height: 3.5;
-          float: right;
 
         }
-
       }
+
     }
 
   }
-
 }
