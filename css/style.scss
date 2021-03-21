@@ -6,6 +6,9 @@ $sspc: 917px; // SmallSmallPC画面
 $ipad: 768px; // iPad
 $bspside: 690px; // 大きいスマホの横
 $bspsides: 560px; // 大きいスマホの横より少し小さい
+$bbsp: 515px; // スマホよりもっともっと大きい
+$bsp: 470px; // スマホよりもっと大きい
+$lbsp: 446px; // スマホより少し大きい
 $sp: 375px; // スマホ
 $se: 320px; // iPone SE
 
@@ -41,6 +44,24 @@ $se: 320px; // iPone SE
 
 @mixin bspsides {
   @media screen and (max-width: ($bspsides)) {
+    @content;
+  }
+}
+
+@mixin bbsp {
+  @media screen and (max-width: ($bbsp)) {
+    @content;
+  }
+}
+
+@mixin bsp {
+  @media screen and (max-width: ($bsp)) {
+    @content;
+  }
+}
+
+@mixin lbsp {
+  @media screen and (max-width: ($lbsp)) {
     @content;
   }
 }
@@ -96,6 +117,15 @@ body {
     img {
       width: 263px;
       height: 73px;
+
+      @include bspsides {
+        width: 200px;
+        height: auto;
+      }
+
+      @include bspsides {
+        width: 150px;
+      }
     }
   }
 
@@ -119,6 +149,10 @@ body {
 
         @include bspside {
           display: block;
+        }
+
+        @include bspsides {
+          text-align: right;
         }
       }
 
@@ -147,6 +181,11 @@ body {
         margin-right: 10px;
         vertical-align: bottom;
 
+        @include bspsides {
+          width: 20px;
+          height: 20px;
+        }
+
       }
 
       .header-number {
@@ -160,6 +199,10 @@ body {
         @media(min-width: 768px) {
           a[href^="tel:"] {
             pointer-events: none;
+          }
+
+          @include bspsides {
+            font-size: 20px;
           }
         }
       }
@@ -218,7 +261,7 @@ body {
           line-height: 1;
         }
 
-        @include sp {
+        @media screen and (max-width: 439px) {
           padding: 10px 17px 26px;
           top: 12%;
           left: 28%;
@@ -271,7 +314,7 @@ body {
           line-height: 1;
         }
 
-        @include sp {
+        @media screen and (max-width: 439px) {
           padding: 10px 17px 15px;
           top: 12%;
           left: 10%;
@@ -319,6 +362,22 @@ body {
       height: 600px;
     }
 
+    @include bspsides {
+      height: 530px;
+    }
+
+    @include bsp {
+      height: 500px;
+    }
+
+    @media screen and (max-width: 434px) {
+      height: 450px;
+    }
+
+    @media screen and (max-width: 383px) {
+      height: 400px;
+    }
+
     .about-text {
 
       .text1 {
@@ -335,6 +394,14 @@ body {
           margin-bottom: 20px;
         }
 
+        @media screen and (max-width: 434px) {
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 383px) {
+          font-size: 18px;
+        }
+
       }
 
       .text2 {
@@ -345,6 +412,14 @@ body {
         line-height: 1.2;
         background: linear-gradient(transparent 70%, #99E5A5 30%);
 
+        @media screen and (max-width: 434px) {
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 383px) {
+          font-size: 18px;
+        }
+
       }
 
       p {
@@ -354,6 +429,16 @@ body {
 
         @include ipad {
           margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 434px) {
+          font-size: 14px;
+          margin-top: 30px;
+        }
+
+        @media screen and (max-width: 383px) {
+          font-size: 12px;
+          margin-top: 30px;
         }
       }
     }
@@ -382,6 +467,9 @@ body {
     padding-bottom: 60px;
   }
 
+  @include bsp {
+    padding-bottom: 40px;
+  }
 
   &-title {
 
@@ -401,6 +489,15 @@ body {
       margin: 60px 0 30px;
     }
 
+    @include bsp {
+      font-size: 20px;
+      margin: 30px 0 20px;
+    }
+
+    @media screen and (max-width: 389px) {
+      font-size: 18px;
+    }
+
   }
 
   &-copy {
@@ -408,6 +505,15 @@ body {
     font-size: 16px;
     line-height: 2.4;
     margin-bottom: 36px;
+
+    @include bsp {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 389px) {
+      font-size: 12px;
+    }
 
   }
 
@@ -430,6 +536,10 @@ body {
 
       @include mpc {
         height: 450px;
+      }
+
+      @include bsp {
+        height: 400px;
       }
     }
 
@@ -454,6 +564,12 @@ body {
         width: 80%;
         height: 520px;
       }
+
+      @include bsp {
+        height: 450px;
+      }
+
+
     }
 
     h3 {
@@ -464,6 +580,10 @@ body {
 
       @include mpc {
         margin: 30px 0 30px;
+      }
+
+      @include bsp {
+        font-size: 20px;
       }
     }
 
@@ -477,6 +597,18 @@ body {
 
       @include mpc {
         text-align: center;
+      }
+
+      @include bsp {
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 388px) {
+        font-size: 12px;
+      }
+
+      @include se {
+        font-size: 11px;
       }
 
     }
@@ -516,6 +648,15 @@ body {
 
     @include ipad {
       margin: 0 auto 60px;
+    }
+
+    @include bsp {
+      font-size: 20px;
+      margin: 0 auto 40px;
+    }
+
+    @media screen and (max-width: 389px) {
+      font-size: 18px;
     }
   }
 
@@ -566,6 +707,15 @@ body {
           padding: 7px 15px;
           margin: 0 34px 0 31px;
 
+          @include lbsp {
+            display: block;
+            padding: 10px 15px;
+            width: 50px;
+            margin: 0;
+            line-height: 1;
+            text-align: center;
+          }
+
         }
 
         .news-text {
@@ -577,6 +727,10 @@ body {
 
           @include sspc {
             display: block;
+          }
+
+          @include lbsp {
+            line-height: 2;
           }
         }
       }
@@ -663,6 +817,10 @@ footer {
           width: 263px;
           height: 73px;
           margin-bottom: 25px;
+
+          @include bspsides {
+            margin-bottom: 10px;
+          }
         }
 
         &-address {
@@ -680,12 +838,16 @@ footer {
 
           margin: 25px 0 28px;
 
+          @include bspsides {
+            margin: 15px 0 20px;
+          }
+
           ::before {
 
             content: '';
             display: inline-block;
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             background-image: url(../img/tel.png);
             background-size: contain;
             vertical-align: middle;
@@ -741,6 +903,17 @@ footer {
 
                 margin: 0 23px 0 16px;
 
+                @include bbsp {
+                  display: block;
+                  margin: 0;
+                }
+              }
+
+              &-pm {
+
+                @include bbsp {
+                  display: block;
+                }
               }
 
             }
