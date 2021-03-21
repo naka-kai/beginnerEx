@@ -636,6 +636,10 @@ body {
     padding-bottom: 80px;
   }
 
+  @include bsp {
+    padding-bottom: 40px;
+  }
+
   h3 {
 
     text-align: center;
@@ -678,12 +682,21 @@ body {
       padding: 20px 0 30px;
     }
 
+    @include lbsp {
+      padding: 10px 0 20px;
+    }
+
     .news-item {
 
       padding: 20px 0 18px;
       border-bottom: #E7E7E7 2px solid;
       margin: 0 68px 0 64px;
       list-style: none;
+
+      @include lbsp {
+        margin: 0 40px 0 40px;
+        padding: 10px 0 10px;
+      }
 
       a {
 
@@ -716,6 +729,11 @@ body {
             text-align: center;
           }
 
+          @media screen and (max-width: 441px) {
+            padding: 10px 10px;
+            width: 50px;
+          }
+
         }
 
         .news-text {
@@ -731,6 +749,10 @@ body {
 
           @include lbsp {
             line-height: 2;
+          }
+
+          @media screen and (max-width: 441px) {
+            font-size: 14px;
           }
         }
       }
@@ -754,6 +776,10 @@ footer {
 
   @include spc {
     padding-top: 80px;
+  }
+
+  @include bsp {
+    padding-top: 40px;
   }
 
   .container {
@@ -820,7 +846,15 @@ footer {
 
           @include bspsides {
             margin-bottom: 10px;
+            width: 40%;
+            height: auto;
           }
+
+          @include bspsides {
+            width: 50%;
+          }
+
+
         }
 
         &-address {
@@ -828,9 +862,22 @@ footer {
           font-size: 16px;
           line-height: 2.4;
 
+          @media screen and (max-width: 356px) {
+            line-height: 2;
+          }
+
+
           &-number {
             margin-right: 10px;
 
+
+          }
+
+          &-place {
+
+            @media screen and (max-width: 356px) {
+              display: block;
+            }
           }
         }
 

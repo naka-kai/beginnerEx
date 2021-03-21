@@ -626,6 +626,12 @@ body {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .news {
+    padding-bottom: 40px;
+  }
+}
+
 .news h3 {
   text-align: center;
   font-size: 24px;
@@ -679,11 +685,24 @@ body {
   }
 }
 
+@media screen and (max-width: 446px) {
+  .news .news-box {
+    padding: 10px 0 20px;
+  }
+}
+
 .news .news-box .news-item {
   padding: 20px 0 18px;
   border-bottom: #E7E7E7 2px solid;
   margin: 0 68px 0 64px;
   list-style: none;
+}
+
+@media screen and (max-width: 446px) {
+  .news .news-box .news-item {
+    margin: 0 40px 0 40px;
+    padding: 10px 0 10px;
+  }
 }
 
 .news .news-box .news-item a {
@@ -718,6 +737,13 @@ body {
   }
 }
 
+@media screen and (max-width: 441px) {
+  .news .news-box .news-item a .news-category {
+    padding: 10px 10px;
+    width: 50px;
+  }
+}
+
 .news .news-box .news-item a .news-text {
   color: #444444;
   font-size: 16px;
@@ -734,6 +760,12 @@ body {
 @media screen and (max-width: 446px) {
   .news .news-box .news-item a .news-text {
     line-height: 2;
+  }
+}
+
+@media screen and (max-width: 441px) {
+  .news .news-box .news-item a .news-text {
+    font-size: 14px;
   }
 }
 
@@ -755,6 +787,12 @@ footer {
 @media screen and (max-width: 1000px) {
   footer {
     padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  footer {
+    padding-top: 40px;
   }
 }
 
@@ -832,6 +870,14 @@ footer .container .info-wrapper .info-logo {
 @media screen and (max-width: 560px) {
   footer .container .info-wrapper .info-logo {
     margin-bottom: 10px;
+    width: 40%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  footer .container .info-wrapper .info-logo {
+    width: 50%;
   }
 }
 
@@ -840,8 +886,20 @@ footer .container .info-wrapper .info-address {
   line-height: 2.4;
 }
 
+@media screen and (max-width: 356px) {
+  footer .container .info-wrapper .info-address {
+    line-height: 2;
+  }
+}
+
 footer .container .info-wrapper .info-address-number {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 356px) {
+  footer .container .info-wrapper .info-address-place {
+    display: block;
+  }
 }
 
 footer .container .info-wrapper .info-tel {
