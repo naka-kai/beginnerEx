@@ -1,11 +1,28 @@
 @charset "utf-8";
 
-$sp: 375px; // iPhone
-$ipad: 768px; // iPad縦
-$spc: 1200px; // 少し小さいPC画面
+$mpc: 1200px; // MediumPC画面
+$spc: 1000px; // SmallPC画面
+$sspc: 917px; // SmallSmallPC画面
+$ipad: 768px; // iPad
+$bspside: 690px; // 大きいスマホの横
+$bspsides: 560px; // 大きいスマホの横より少し小さい
+$sp: 375px; // スマホ
+$se: 320px; // iPone SE
 
-@mixin sp {
-  @media screen and (max-width: ($sp)) {
+@mixin mpc {
+  @media screen and (max-width: ($mpc)) {
+    @content;
+  }
+}
+
+@mixin spc {
+  @media screen and (max-width: ($spc)) {
+    @content;
+  }
+}
+
+@mixin sspc {
+  @media screen and (max-width: ($sspc)) {
     @content;
   }
 }
@@ -16,8 +33,26 @@ $spc: 1200px; // 少し小さいPC画面
   }
 }
 
-@mixin spc {
-  @media screen and (max-width: ($spc)) {
+@mixin bspside {
+  @media screen and (max-width: ($bspside)) {
+    @content;
+  }
+}
+
+@mixin bspsides {
+  @media screen and (max-width: ($bspsides)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin se {
+  @media screen and (max-width: ($se)) {
     @content;
   }
 }
@@ -51,6 +86,11 @@ body {
   margin-top: 29px;
   margin-bottom: 28px;
 
+  @include mpc {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   &-logo {
 
     img {
@@ -77,6 +117,16 @@ body {
       p {
         display: inline;
 
+        @include bspside {
+          display: block;
+        }
+      }
+
+      &-text1 {
+
+        @include bspside {
+          margin-bottom: 8px;
+        }
       }
 
     }
@@ -121,6 +171,7 @@ body {
 
 .mainvisual {
 
+
   .wrapper {
     background-image: url(../img/mainvisual.png);
     height: 0;
@@ -129,7 +180,6 @@ body {
     padding-top: 66.6666666667%;
     width: 100%;
     position: relative;
-
 
     .mainvisual-text {
 
@@ -144,6 +194,46 @@ body {
         font-weight: bold;
         line-height: 1.2;
 
+        @include ipad {
+          padding: 16px 23px 55px;
+          top: 10%;
+          left: 25%;
+          font-size: 25px;
+          line-height: 1;
+        }
+
+        @include bspside {
+          padding: 16px 23px 49px;
+          top: 10%;
+          left: 25%;
+          font-size: 20px;
+          line-height: 1;
+        }
+
+        @include bspsides {
+          padding: 10px 17px 45px;
+          top: 10%;
+          left: 25%;
+          font-size: 16px;
+          line-height: 1;
+        }
+
+        @include sp {
+          padding: 10px 17px 26px;
+          top: 12%;
+          left: 28%;
+          font-size: 12px;
+          line-height: 1;
+        }
+
+        @include se {
+          padding: 10px 13px 24px;
+          top: 12%;
+          left: 28%;
+          font-size: 10px;
+          line-height: 1;
+        }
+
       }
 
       .text2 {
@@ -156,6 +246,46 @@ body {
         font-size: 28px;
         font-weight: bold;
         line-height: 1.2;
+
+        @include ipad {
+          padding: 16px 23px 30px;
+          top: 10%;
+          left: 8%;
+          font-size: 25px;
+          line-height: 1;
+        }
+
+        @include bspside {
+          padding: 16px 23px 30px;
+          top: 10%;
+          left: 10%;
+          font-size: 20px;
+          line-height: 1;
+        }
+
+        @include bspsides {
+          padding: 10px 17px 30px;
+          top: 10%;
+          left: 10%;
+          font-size: 16px;
+          line-height: 1;
+        }
+
+        @include sp {
+          padding: 10px 17px 15px;
+          top: 12%;
+          left: 10%;
+          font-size: 12px;
+          line-height: 1;
+        }
+
+        @include se {
+          padding: 10px 13px 15px;
+          top: 12%;
+          left: 10%;
+          font-size: 10px;
+          line-height: 1;
+        }
 
 
         span {
@@ -170,13 +300,26 @@ body {
 
 .about {
 
+  @include mpc {
+    margin: 0 10px;
+  }
+
   .container {
     display: flex;
     height: 664px;
     align-items: center;
 
-    .about-text {
+    @include mpc {
+      height: 550px;
+      margin-top: 20px;
+    }
 
+    @include ipad {
+      display: block;
+      height: 600px;
+    }
+
+    .about-text {
 
       .text1 {
 
@@ -186,6 +329,11 @@ body {
         line-height: 1.2;
         background: linear-gradient(transparent 70%, #99E5A5 30%);
         margin-bottom: 40px;
+
+        @include ipad {
+          margin-top: 30px;
+          margin-bottom: 20px;
+        }
 
       }
 
@@ -203,6 +351,10 @@ body {
         margin-top: 37px;
         font-size: 16px;
         line-height: 2.4;
+
+        @include ipad {
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -226,6 +378,10 @@ body {
   background-color: #F5FCF8;
   padding-bottom: 89px;
 
+  @include ipad {
+    padding-bottom: 60px;
+  }
+
 
   &-title {
 
@@ -236,6 +392,14 @@ body {
     background: linear-gradient(transparent 70%, #99E5A5 30%);
     display: inline-block;
     margin: 87px 0 73px;
+
+    @include mpc {
+      margin: 70px 0 60px;
+    }
+
+    @include ipad {
+      margin: 60px 0 30px;
+    }
 
   }
 
@@ -252,7 +416,27 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-right: 20px;
+    margin: 0 auto;
+
+    :last-child {
+      margin-right: 0;
+
+      @include mpc {
+        margin: 0 auto;
+      }
+    }
+
+    :nth-child(2) {
+
+      @include mpc {
+        height: 450px;
+      }
+    }
+
+
+    @include mpc {
+      display: block;
+    }
 
     li {
       list-style: none;
@@ -265,7 +449,11 @@ body {
       text-align: center;
       margin-right: 20px;
 
-
+      @include mpc {
+        margin: 0 auto 20px;
+        width: 80%;
+        height: 520px;
+      }
     }
 
     h3 {
@@ -273,6 +461,10 @@ body {
       font-weight: bold;
       line-height: 1.6;
       margin: 47px 0 48px;
+
+      @include mpc {
+        margin: 30px 0 30px;
+      }
     }
 
     p {
@@ -282,6 +474,10 @@ body {
       text-align: left;
       width: 90%;
       margin: 0 auto;
+
+      @include mpc {
+        text-align: center;
+      }
 
     }
 
@@ -304,6 +500,10 @@ body {
   text-align: center;
   padding-bottom: 112px;
 
+  @include ipad {
+    padding-bottom: 80px;
+  }
+
   h3 {
 
     text-align: center;
@@ -314,6 +514,9 @@ body {
     display: inline-block;
     margin: 0 auto 70px;
 
+    @include ipad {
+      margin: 0 auto 60px;
+    }
   }
 
   .news-box {
@@ -323,6 +526,16 @@ body {
     border-radius: 30px;
     padding: 54px 0 109px;
     box-shadow: 0 3px 6px rgba($color:#000000, $alpha: 0.16);
+
+    @include mpc {
+      width: 80%;
+      margin: 0 auto;
+      padding: 40px 0 60px;
+    }
+
+    @include sspc {
+      padding: 20px 0 30px;
+    }
 
     .news-item {
 
@@ -361,6 +574,10 @@ body {
           font-size: 16px;
           font-weight: bold;
           line-height: 2.4;
+
+          @include sspc {
+            display: block;
+          }
         }
       }
     }
@@ -376,15 +593,38 @@ footer {
   text-align: center;
   padding-bottom: 173px;
 
+  @include mpc {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+
+  @include spc {
+    padding-top: 80px;
+  }
+
   .container {
 
     display: flex;
     justify-content: space-between;
 
+    @include mpc {
+      margin: 0 20px;
+    }
+
+    @include spc {
+      display: block;
+      margin: 0;
+    }
+
     .map-wrapper {
 
       position: relative;
       width: 51%;
+
+      @include spc {
+        width: 80%;
+        margin: 0 auto;
+      }
 
       .map {
 
@@ -408,6 +648,11 @@ footer {
       text-align: left;
       margin-top: 24px;
       margin-left: 20px;
+
+      @include spc {
+        width: 80%;
+        margin: 30px auto 0;
+      }
 
       .info {
 
