@@ -1,5 +1,19 @@
 @charset "UTF-8";
 /* 全体構造 */
+::-webkit-full-page-media,
+:future,
+:root .moredetail-copy {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 446px) {
+  ::-webkit-full-page-media,
+  :future,
+  :root .moredetail-copy {
+    font-size: 12px;
+  }
+}
+
 html {
   font-size: 10px;
   overflow-x: hidden;
@@ -14,13 +28,7 @@ body {
   min-width: 50px;
 }
 
-body _::-webkit-full-page-media,
-body _:future,
-body :root .header {
-  background-color: aqua;
-}
-
-.container {
+body .container {
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -625,12 +633,6 @@ body :root .header {
           transform: translateX(-50%);
 }
 
-_::-webkit-full-page-media,
-_:future,
-:root .moredetail-copy {
-  font-size: 15px;
-}
-
 /* news */
 .news {
   background-color: #F5FCF8;
@@ -737,7 +739,7 @@ _:future,
 .news .news-box .news-item a .news-category {
   color: #FFFFFF;
   background-color: #444444;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 3.2;
   padding: 7px 15px;
@@ -748,7 +750,7 @@ _:future,
   .news .news-box .news-item a .news-category {
     display: block;
     padding: 10px 15px;
-    width: 50px;
+    width: 70px;
     margin: 0;
     line-height: 1;
     text-align: center;
@@ -758,7 +760,8 @@ _:future,
 @media screen and (max-width: 441px) {
   .news .news-box .news-item a .news-category {
     padding: 10px 10px;
-    width: 50px;
+    width: 70px;
+    font-size: 14px;
   }
 }
 
