@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+$bpc: 1600px; // BigPC画面
 $mpc: 1200px; // MediumPC画面
 $spc: 1000px; // SmallPC画面
 $sspc: 917px; // SmallSmallPC画面
@@ -11,6 +12,12 @@ $bsp: 470px; // スマホよりもっと大きい
 $lbsp: 446px; // スマホより少し大きい
 $sp: 375px; // スマホ
 $se: 320px; // iPone SE
+
+@mixin bpc {
+  @media screen and (max-width: ($bpc)) {
+    @content;
+  }
+}
 
 @mixin mpc {
   @media screen and (max-width: ($mpc)) {
@@ -242,113 +249,133 @@ body {
     .mainvisual-text {
 
       .text1 {
+        height: 565px;
+        width: 102px;
+        display: flex;
+        align-items: center;
         writing-mode: vertical-rl;
-        padding: 16px 23px 76px;
+        padding: 25px 0 0;
         background-color: white;
         position: absolute;
         top: 8%;
         left: 19%;
         font-size: 28px;
         font-weight: bold;
-        line-height: 1.2;
+        line-height: 1.5;
+
+        @include spc {
+          height: 450px;
+          width: 80px;
+          font-size: 26px;
+          height: 500px;
+        }
+
+        @include sspc {
+          writing-mode: horizontal-tb;
+          height: auto;
+          width: 390px;
+          position: absolute;
+          top: 50%;
+          left: 8%;
+          padding: 20px 0 20px 20px;
+          font-size: 23px;
+        }
 
         @include ipad {
-          padding: 16px 23px 55px;
-          top: 10%;
-          left: 25%;
-          font-size: 25px;
-          line-height: 1;
+          font-size: 21px;
+          width: 360px;
         }
 
         @include bspside {
-          padding: 16px 23px 49px;
-          top: 10%;
-          left: 25%;
-          font-size: 20px;
-          line-height: 1;
+          font-size: 19px;
+          width: 320px;
+          padding: 15px 0 15px 15px;
         }
 
-        @include bspsides {
-          padding: 10px 17px 45px;
-          top: 10%;
-          left: 25%;
+        @include bsp {
           font-size: 16px;
-          line-height: 1;
+          width: 280px;
+          padding: 12px 0 12px 12px;
         }
 
-        @media screen and (max-width: 439px) {
-          padding: 10px 17px 26px;
-          top: 12%;
-          left: 28%;
-          font-size: 12px;
-          line-height: 1;
+        @include sp {
+          width: 280px;
+          padding: 10px 0 10px 10px;
         }
 
         @include se {
-          padding: 10px 13px 24px;
-          top: 12%;
-          left: 28%;
-          font-size: 10px;
-          line-height: 1;
+          font-size: 13px;
+          width: 220px;
+          padding: 8px 0 8px 8px;
         }
 
       }
 
       .text2 {
+        height: 565px;
+        width: 102px;
+        display: flex;
+        align-items: center;
         writing-mode: vertical-rl;
-        padding: 16px 23px 49px;
+        padding: 25px 0 0;
         background-color: white;
         position: absolute;
         top: 8%;
         left: 8%;
         font-size: 28px;
         font-weight: bold;
-        line-height: 1.2;
+        line-height: 1.5;
+
+        @include spc {
+          height: 450px;
+          width: 80px;
+          font-size: 26px;
+          height: 500px;
+        }
+
+        @include sspc {
+          writing-mode: horizontal-tb;
+          position: absolute;
+          top: 70%;
+          left: 8%;
+          padding: 20px 0 20px 20px;
+          height: auto;
+          width: 390px;
+          font-size: 23px;
+        }
 
         @include ipad {
-          padding: 16px 23px 30px;
-          top: 10%;
-          left: 8%;
-          font-size: 25px;
-          line-height: 1;
+          font-size: 21px;
+          width: 360px;
         }
 
         @include bspside {
-          padding: 16px 23px 30px;
-          top: 10%;
-          left: 10%;
-          font-size: 20px;
-          line-height: 1;
+          font-size: 19px;
+          width: 320px;
+          padding: 15px 0 15px 15px;
         }
 
-        @include bspsides {
-          padding: 10px 17px 30px;
-          top: 10%;
-          left: 10%;
+        @include bsp {
           font-size: 16px;
-          line-height: 1;
+          width: 280px;
+          padding: 12px 0 12px 12px;
         }
 
-        @media screen and (max-width: 439px) {
-          padding: 10px 17px 15px;
-          top: 12%;
-          left: 10%;
-          font-size: 12px;
-          line-height: 1;
+        @include sp {
+          width: 280px;
+          padding: 10px 0 10px 10px;
         }
 
         @include se {
-          padding: 10px 13px 15px;
-          top: 12%;
-          left: 10%;
-          font-size: 10px;
-          line-height: 1;
+          font-size: 13px;
+          width: 220px;
+          padding: 8px 0 8px 8px;
         }
+      }
 
 
-        span {
-          color: #21A937;
-        }
+      span {
+        color: #21A937;
       }
     }
   }
